@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <style>
+        .form-container {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration and Login</h1>
+    
+    <div>
+        <button onclick="showForm('register')">Sign Up</button>
+        <button onclick="showForm('login')">Login</button>
+    </div>
+
+    <div id="registerForm" class="form-container">
+        <h2>Register</h2>
+        <form>
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="username" required><br><br>
+            
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="email" required><br><br>
+            
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" required><br><br>
+            
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+
+    <div id="loginForm" class="form-container">
+        <h2>Login</h2>
+        <form>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required><br><br>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required><br><br>
+            
+            <button type="button" onclick="loginUser()">Login</button>
+        </form>
+    </div>
+
+    <p id="message"></p>
+
+    <script src="auth.js"></script>
+</body>
+</html>
